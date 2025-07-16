@@ -1,0 +1,5 @@
+org/acme/nqueens/solver/NQueensConstraintProvider.class
+org/acme/nqueens/domain/Queen.class
+org/acme/nqueens/domain/NQueens.class
+org/acme/nqueens/solver/NQueensEasyScoreCalculator.class
+org/acme/nqueens/App.class

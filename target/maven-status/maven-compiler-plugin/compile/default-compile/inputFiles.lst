@@ -1,0 +1,5 @@
+/home/deneb/Projects/OptaplannerSamples/NQueens/src/main/java/org/acme/nqueens/App.java
+/home/deneb/Projects/OptaplannerSamples/NQueens/src/main/java/org/acme/nqueens/domain/NQueens.java
+/home/deneb/Projects/OptaplannerSamples/NQueens/src/main/java/org/acme/nqueens/domain/Queen.java
+/home/deneb/Projects/OptaplannerSamples/NQueens/src/main/java/org/acme/nqueens/solver/NQueensConstraintProvider.java
+/home/deneb/Projects/OptaplannerSamples/NQueens/src/main/java/org/acme/nqueens/solver/NQueensEasyScoreCalculator.java
