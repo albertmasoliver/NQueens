@@ -1,51 +1,76 @@
 package org.acme.nqueens.domain;
 
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
-import org.optaplanner.core.api.domain.solution.ProblemFactProperty;
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
+import org.optaplanner.core.api.domain.solution.ProblemFactCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningScore;
-import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
+import org.optaplanner.core.api.domain.valuerange.ValueRangeProvider;
+import org.optaplanner.core.api.score.buildin.simple.SimpleScore;
 import java.util.List;
+import org.acme.nqueens.common.AbstractPersistable;
 
 @PlanningSolution
-public class NQueens {
-    @ProblemFactProperty
+public class NQueens extends AbstractPersistable {
+    
     private int n;
 
-    @PlanningEntityCollectionProperty
+    private List<Column> columnList;
+    private List<Row> rowList;
     private List<Queen> queenList;
 
-    @PlanningScore
-    private HardSoftScore score;
+    private SimpleScore score;
 
-    public NQueens() {}
+    public NQueens(){}
 
-    public NQueens(int n, List<Queen> queenList) {
-        this.n = n;
-        this.queenList = queenList;
+    public NQueens(int id){
+        super(id);
     }
 
-    public int getN() {
+    public int getN(){
         return n;
     }
 
-    public void setN(int n) {
+    public void setN(int n){
         this.n = n;
     }
 
-    public List<Queen> getQueenList() {
+    @ProblemFactCollectionProperty
+    public List<Column> getColumnList(){
+        return columnList;
+    }
+
+    public void setColumnList(List<Column> columnList){
+        this.columnList = columnList;
+    }
+
+    @ValueRangeProvider(id = "rowRange")
+    @ProblemFactCollectionProperty
+    public List<Row> getRowList(){
+        return rowList;
+    }
+
+    public void setRowList(List<Row> rowList){
+        this.rowList = rowList;
+    }
+
+    @PlanningEntityCollectionProperty
+    public List<Queen> getQueenList(){
         return queenList;
     }
 
-    public void setQueenList(List<Queen> queenList) {
+    public void setQueenList(List<Queen> queenList){
         this.queenList = queenList;
     }
 
-    public HardSoftScore getScore() {
+    @PlanningScore
+    public SimpleScore getScore(){
         return score;
     }
 
-    public void setScore(HardSoftScore score) {
+    public void setScore(SimpleScore score){
         this.score = score;
     }
+
+    
+    
 } 

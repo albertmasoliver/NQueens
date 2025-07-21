@@ -1,5 +1,10 @@
-org/acme/nqueens/solver/NQueensConstraintProvider.class
+org/acme/nqueens/solver/QueenDifficultyWeightFactory$QueenDifficultyWeight.class
+org/acme/nqueens/solver/QueenDifficultyWeightFactory.class
 org/acme/nqueens/domain/Queen.class
 org/acme/nqueens/domain/NQueens.class
-org/acme/nqueens/solver/NQueensEasyScoreCalculator.class
+org/acme/nqueens/domain/Column.class
 org/acme/nqueens/App.class
+org/acme/nqueens/solver/RowStrengthWeightFactory.class
+org/acme/nqueens/solver/RowStrengthWeightFactory$RowStrengthWeight.class
+org/acme/nqueens/common/AbstractPersistable.class
+org/acme/nqueens/domain/Row.class
